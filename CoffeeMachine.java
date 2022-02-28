@@ -24,7 +24,7 @@ public class CoffeeMachine {
                         System.out.println(milk + " ml of milk");
                         System.out.println(coffeeBeans - 16 + " g of coffee beans");
                         System.out.println(cups - 1 + " disposable cups");
-                        System.out.println("$"+ money + 4 + " of money");
+                        System.out.println("$"+ (money + 4) + " of money");
                         if (water <= 250) {
                             System.out.println("I can not serve you a espresso");
                         } else if (coffeeBeans <= 16) {
@@ -39,7 +39,7 @@ public class CoffeeMachine {
                         System.out.println(milk - 75 + " ml of milk");
                         System.out.println(coffeeBeans - 20 + " g of coffee beans");
                         System.out.println(cups - 1 + " disposable cups");
-                        System.out.println("$"+ money + 7 + " of money");
+                        System.out.println("$"+ (money + 7) + " of money");
                         if (water <= 350) {
                             System.out.println("I can not serve you a latte");
                         } else if (milk <= 75) {
@@ -56,7 +56,7 @@ public class CoffeeMachine {
                         System.out.println(milk - 100 + " ml of milk");
                         System.out.println(coffeeBeans - 12 + " g of coffee beans");
                         System.out.println(cups - 1 + " disposable cups");
-                        System.out.println("$"+ money + 6 + " of money");
+                        System.out.println("$"+ (money + 6) + " of money");
                         if (water <= 200) {
                             System.out.println("I can not serve you a cappuccino");
                         } else if (milk <= 100) {
