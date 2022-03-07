@@ -3,14 +3,15 @@ package machine;
 import java.util.Scanner;
 
 public class CoffeeMachine {
+    static Scanner scanner = new Scanner(System.in);
+    static int water = 400;
+    static int milk = 540;
+    static int coffeeBeans = 120;
+    static int cups = 9;
+    static int money = 550;
+    static String options = " ";
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int water = 400;
-        int milk = 540;
-        int coffeeBeans = 120;
-        int cups = 9;
-        int money = 550;
-        String options = " ";
+
         while (!options.equals("exit")){
 
             System.out.println("Write action (buy, fill, take, remaining, exit):");
@@ -78,32 +79,39 @@ public class CoffeeMachine {
                         break;
                     case ("back"):
                         break;
-                    }
+                }
 
             } else if (options.equals("fill")) {
-                System.out.println("Write how many ml of water you want to add:");
-                water += scanner.nextInt();
-                System.out.println("Write how many ml of milk you want to add:");
-                milk += scanner.nextInt();
-                System.out.println("Write how many grams of coffee beans you want to add:");
-                coffeeBeans += scanner.nextInt();
-                System.out.println("Write how many disposable cups of coffee you want to add:");
-                cups += scanner.nextInt();
-
+                fill();
             } else if (options.equals("take")) {
-                System.out.println("I gave you $" + money);
-                money -= money;
-
+                take();
             } else if (options.equals("remaining")) {
-                System.out.println("The coffee machine has:");
-                System.out.println(water + " ml of water");
-                System.out.println(milk + " ml of milk");
-                System.out.println(coffeeBeans + " g of coffee beans");
-                System.out.println(cups + " disposable cups");
-                System.out.println("$" + money + " of money");
+                remaining();
             }
 
         }
     }
+
+    public static void remaining() {
+        System.out.println("The coffee machine has:");
+        System.out.println(water + " ml of water");
+        System.out.println(milk + " ml of milk");
+        System.out.println(coffeeBeans + " g of coffee beans");
+        System.out.println(cups + " disposable cups");
+        System.out.println("$" + money + " of money");
+    }
+    public static void fill() {
+        System.out.println("Write how many ml of water you want to add:");
+        water += scanner.nextInt();
+        System.out.println("Write how many ml of milk you want to add:");
+        milk += scanner.nextInt();
+        System.out.println("Write how many grams of coffee beans you want to add:");
+        coffeeBeans += scanner.nextInt();
+        System.out.println("Write how many disposable cups of coffee you want to add:");
+        cups += scanner.nextInt();
+    }
+    public static void take() {
+        System.out.println("I gave you $" + money);
+        money -= money;
+    }
 }
-    
